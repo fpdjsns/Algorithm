@@ -1,7 +1,8 @@
 /*
- * ¹®Á¦ : https://algospot.com/judge/problem/read/ASYMTILING
- * ½Ã°£º¹Àâµµ : O(N)
- * ¾Ë°í¸®Áò : DP
+ * codeground - Practice - SCPC 2íšŒ ë³¸ì„  - 36. ì¬í™œìš©
+ * ë¬¸ì œ : https://www.codeground.org/practice/practiceProblemList
+ * ì‹œê°„ë³µì¡ë„ : O(N2M)
+ * ì•Œê³ ë¦¬ì¦˜ : DP
  */
 
 
