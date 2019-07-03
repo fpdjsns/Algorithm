@@ -1,10 +1,8 @@
 /*
- * codeground - Practice - SCPC 2회 본선 - 36. 재활용
- * 문제 : https://www.codeground.org/practice/practiceProblemList
- * 시간복잡도 : O(N2M)
+ * 문제 : https://algospot.com/judge/problem/read/ASYMTILING
+ * 시간복잡도 : O(N)
  * 알고리즘 : DP
  */
-
 
 #include <string>
 #include <vector>
