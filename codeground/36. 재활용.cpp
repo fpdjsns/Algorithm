@@ -1,4 +1,11 @@
-﻿#include <iostream>
+/*
+ * codeground - Practice - SCPC 2회 본선 - 36. 재활용
+ * 문제 : https://www.codeground.org/practice/practiceProblemList
+ * 시간복잡도 : O(N2M)
+ * 알고리즘 : DP
+ */
+
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <string.h>
