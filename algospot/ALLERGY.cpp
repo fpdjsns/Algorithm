@@ -1,5 +1,6 @@
 /*
  * 문제 : https://algospot.com/judge/problem/read/ALLERGY
+ * 시간복잡도 : O(M^N)
  * 알고리즘 : Combination search
  */
 
