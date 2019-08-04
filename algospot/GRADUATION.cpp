@@ -3,14 +3,6 @@
  * 시간복잡도 : O(M * 2^(N+C))
  * 알고리즘 : Bitmask
  */
- 
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <iostream>
 #include <vector>
