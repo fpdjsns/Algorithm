@@ -4,6 +4,14 @@
  * 알고리즘 : Bitmask
  */
  
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -17,8 +25,9 @@ vector<int> classList; // classList[sem] = sem 학기에 들을 수 있는 클�
 vector<int> preClassList; // preClassList[class] = class를 듣기위한 선수과목
 
 int getCnt(int n) {
-    if(n == 0) return 0;
-    return n % 2 + getCnt(n / 2);
+    if(n <= 1) 
+        return n;
+    return getCnt(n / 2) + (n % 2);
 }
 
 // sem : 현재 탐색할 학기
