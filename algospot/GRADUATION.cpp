@@ -24,7 +24,6 @@ int getCnt(int n) {
 
 // sem : 현재 탐색할 학기
 // classes : 현재까지 수강한 수업
-// classCnt : 현재까지 수강한 수업의 수
 int solve(int sem, int classes) {
     if(K <= getCnt(classes)){
       return 0; // don't need to take any more classes
