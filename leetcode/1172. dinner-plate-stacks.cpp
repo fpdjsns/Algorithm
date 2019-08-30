@@ -7,7 +7,6 @@
 class DinnerPlates {
 private:
     int capacity = 0;
-    int leftIndex = 0; // left stack index
     set<int> fullStack; // 가득찬 스택 인덱스
     set<int> blankFullStack; // fullStack의 사이사이에 비어있는 index. push시에 바로 찾아가기 위함
     map<int, stack<int>> stackMap; // {index, stack}
