@@ -1,6 +1,6 @@
 /*
  * 문제 : https://leetcode.com/problems/dinner-plate-stacks/
- * 시간복잡도 : push - O(1), O(N)(stack모두 찰 때) / pop - O(1), O(N)(null일 때) / popAtStack - O(1), O(N)(null일 때)
+ * 시간복잡도 : push - O(1), O(N)(stack모두 찰 때) / pop - O(1), O(N)(null일 때) / popAtStack - O(logN), O(N)(null일 때)
  * 자료구조 : Stack, Set, Map
  */
 
