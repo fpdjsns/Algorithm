@@ -1,7 +1,7 @@
 /*
  * 문제 : https://leetcode.com/problems/as-far-from-land-as-possible/
  * 시간복잡도 : O(NM) // N : grid 전체 크기, M : land의 개수
- * 자료구조 : BFS
+ *  : BFS
  */
 
 class Solution {
