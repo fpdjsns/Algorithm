@@ -19,7 +19,7 @@ public:
         for(int dice=2;dice<=d;dice++){
             for(int sum = 0; sum <= target; sum++){
                 for(int face=1; face<=f; face++){
-                    if(sum-face < 0) break;
+                    if(sum-face <= 0) break;
                     dp[dice][sum] = (dp[dice][sum] + dp[dice-1][sum-face]) % MOD;                
                 }
             }
