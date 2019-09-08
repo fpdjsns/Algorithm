@@ -7,7 +7,7 @@
 class Solution {
 public:
     int numRollsToTarget(int d, int f, int target) {
-        // dp[sum][d] = d개의 dice로 sum을 만들 수 있는 경우의 수
+        // dp[d][sum] = d개의 dice로 sum을 만들 수 있는 경우의 수
         vector<vector<int>> dp(d+1,vector<int>(target+1,0));
         int MOD = 1e9 + 7;
         
