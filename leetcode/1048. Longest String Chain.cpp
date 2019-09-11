@@ -26,7 +26,7 @@ public:
             for(int j=0; j < word2.size(); j++){
                 string word1 = word2;
                 word1.erase(word1.begin()+j);
-                if(word1.empty()) continue;
+             
                 map<string,int>:: iterator it = dp.find(word1);
                 if(it == dp.end()) continue;
                 dp[word2] = max(dp[word2], it->second + 1);
