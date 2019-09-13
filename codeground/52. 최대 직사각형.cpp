@@ -1,7 +1,7 @@
 /*
  * codeground - Practice - 연습문제 - 52. 최대 직사각형
  * 문제 : https://www.codeground.org/practice/practiceProblemList
- * 시간복잡도 : O(N3)
+ * 시간복잡도 : O(N^3)
  */
 
 #include <iostream>
