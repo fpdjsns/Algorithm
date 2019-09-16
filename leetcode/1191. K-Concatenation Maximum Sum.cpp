@@ -1,6 +1,6 @@
 /*
  * 문제 : https://leetcode.com/problems/k-concatenation-maximum-sum/
- * 시간복잡도 : O() 
+ * 시간복잡도 : O(N + M) // N = arr.length, M = k
  */
 
 class Solution {
