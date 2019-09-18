@@ -2,6 +2,7 @@
  * codeground - Practice - SCPC 5회 예선 - 98. 소수 수열
  * 문제 : https://www.codeground.org/practice/practiceProblemList
  * 시간복잡도 : O(NlogN)
+ * 알고리즘 : DP
  */
  
 #include <iostream>
