@@ -1,3 +1,10 @@
+  
+/*
+ * codeground - Practice - SCPC 3회 예선 - 57. 괄호
+ * 문제 : https://www.codeground.org/practice/practiceProblemList
+ * 시간복잡도 : O(N) // N = |S|
+ */
+
 #include <iostream>
 #include<vector>
 #include<algorithm>
