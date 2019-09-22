@@ -15,7 +15,7 @@ public:
     int t = 1;
     int tarjan(int now, int before) {
         int& ret = low[now];
-        ret = num[now] = t++;
+        num[now] = t++;
         for (int i = 0; i<edge[now].size(); i++) {
             int next = edge[now][i];
 
@@ -39,7 +39,7 @@ public:
         num = vector<int>(n, -1);
         low = vector<int>(n, n);
 
-		    for (int i = 0; i<connections.size(); i++) {
+		for (int i = 0; i<connections.size(); i++) {
           int a = connections[i][0];
           int b = connections[i][1];
           edge[a].push_back(b);
@@ -53,5 +53,5 @@ public:
         tarjan(0, -1);
 
         return ans;
-	  }
+	}
 };
