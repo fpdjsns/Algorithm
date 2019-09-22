@@ -46,10 +46,6 @@ public:
           edge[b].push_back(a);
         }
 
-        for (int i = 0; i < n; i++) {
-          sort(edge[i].begin(), edge[i].end());
-        }
-
         tarjan(0, -1);
 
         return ans;
