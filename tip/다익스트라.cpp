@@ -1,5 +1,6 @@
 /*
  * 최소비용 구하기 (1916) : https://www.acmicpc.net/problem/1916 다익스트라 최단경로
+ * 시간복잡도 : O(ElogE)
  */
 #include<iostream>
 #include<vector>
