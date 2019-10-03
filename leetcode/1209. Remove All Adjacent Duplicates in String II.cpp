@@ -18,7 +18,7 @@ public:
 			else {
 				int& cnt = st.top().second;
 				st.top().second++;
-                if(cnt == k) st.pop();
+                		if(cnt == k) st.pop();
 			}
 		}
 		string ans = "";
