@@ -1,6 +1,6 @@
 /*
  * 문제 : https://leetcode.com/problems/path-with-maximum-gold/
- * 시간복잡도 : O((NM)^2)
+ * 시간복잡도 : O((NM)^3)
  * 알고리즘 : DFS
  */
  
