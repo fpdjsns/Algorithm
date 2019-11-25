@@ -24,7 +24,7 @@ int solution(string s) {
     int length = s.size();
     int answer = length;
     
-    for(int compression=1; compression <= length/2 + 1; compression++){ 
+    for(int compression=1; compression <= length/2; compression++){ 
         int cnt = 1;
         int len = 0;
         string before = s.substr(0, compression);
