@@ -1,7 +1,7 @@
 /*
  * programmers - 2020카카오공채 - 괄호 변환
  * 문제 : https://programmers.co.kr/learn/courses/30/lessons/60058
- * 시간복잡도 :
+ * 시간복잡도 : O(NlogN)
  */
 
 #include <string>
@@ -12,27 +12,28 @@
 
 using namespace std;
 
-string calculateU(string u) {
+string calculateU(string u, bool& isCorrect) {
 	stack<char> st;
 	int cnt = 0;
-	bool isCollect = true;
+
+	isCorrect = true;
 	for (int i = 0; i < u.size(); i++) {
 		if (u[i] == '(') cnt++;
 		else cnt--;
 		if (cnt < 0) {
-			isCollect = false;
+			isCorrect = false;
 			break;
 		}
 	}
 
-	if (isCollect) return u;
+	if (isCorrect) return u;
 	string newU = "";
 	for (int i = 1; i < u.size() - 1; i++) {
 		if (u[i] == '(') newU += ')';
 		else newU += '(';
 	}
 
-	return "(" + newU + ")";
+	return newU;
 }
 
 pair<string, string> divide(string p) {
@@ -41,7 +42,7 @@ pair<string, string> divide(string p) {
 	int ind = 0;
 	int cnt = 0;
 
-	while (ind < p.size() && (ind == 0 || cnt != 0 )) {
+	while (ind < p.size() && (ind == 0 || cnt != 0)) {
 		if (p[ind++] == '(') cnt++;
 		else cnt--;
 	}
@@ -55,5 +56,9 @@ string solution(string p) {
 	pair<string, string> uv = divide(p);
 	string u = uv.first;
 	string v = uv.second;
-	return calculateU(u) + solution(v);
+	bool isCorrect = true;
+	u = calculateU(u, isCorrect);
+
+	if (isCorrect) return u + solution(v);
+	return "(" + solution(v) + ")" + u;
 }
