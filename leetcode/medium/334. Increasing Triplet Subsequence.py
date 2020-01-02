@@ -11,7 +11,7 @@ class Solution:
         for three in nums[1:]:
             if three > two:
                 return True
-            if three > one and three < two:
+            if three > one:
                 two = three
             if three < one:
                 one = three
