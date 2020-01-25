@@ -1,7 +1,6 @@
 /**
  * problem: https://leetcode.com/problems/remove-covered-intervals/
  * time complexity: O(NlogN)
- * algorithm: two-pointer
  */
 
 class Solution {
