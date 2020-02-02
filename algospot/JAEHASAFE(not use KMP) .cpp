@@ -1,5 +1,5 @@
 /**
- * problem: 
+ * problem: https://algospot.com/judge/problem/read/JAEHASAFE
  * time complexity: O(NM) (M = numer of pictures's size)
  * data structure: string
  */
