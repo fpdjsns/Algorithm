@@ -13,7 +13,7 @@
 
 using namespace std;
 
-// O(N * (lgN)^2)
+// O(N^2 * lgN)
 vector<int> getSuffixArray(string s) {
 	int size = s.size();
 	vector<int> sa(size);
