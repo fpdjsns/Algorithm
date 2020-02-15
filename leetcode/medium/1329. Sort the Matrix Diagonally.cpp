@@ -1,6 +1,6 @@
 /**
  * problem: https://leetcode.com/problems/sort-the-matrix-diagonally/
- * time complexity: O(NlogN)
+ * time complexity: O(N^2 logN)
  * data structure: heap
  */
  
