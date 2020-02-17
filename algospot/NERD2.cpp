@@ -1,6 +1,6 @@
 /**
  * problem: https://algospot.com/judge/problem/read/NERD2
- * time complexity: 
+ * time complexity: O(NlogN)
  */
 
 #include <string>
