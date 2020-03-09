@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/permutation-in-string/
- * algorithm: sliding window
+ * algorithm: two pointer
  * time complexity: O(|s1| + |s2|)
  */
  
