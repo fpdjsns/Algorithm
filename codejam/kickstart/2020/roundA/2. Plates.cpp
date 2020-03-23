@@ -1,7 +1,7 @@
 /**
  * problem : https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d40bb
  * time complexity : O(NPK)
- * algorithm : dp
+ * algorithm : dp, dfs
  */
 
 #include <string>
