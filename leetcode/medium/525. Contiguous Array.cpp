@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/contiguous-array/
- * data structure : map
+ * algorithm : subsum
  * time complexity : O(N)
  */
  
