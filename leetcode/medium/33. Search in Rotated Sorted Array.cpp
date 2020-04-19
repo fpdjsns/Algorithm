@@ -5,6 +5,9 @@
  */
 
 class Solution {
+    bool LEFT = false;
+    bool RIGHT = true;
+    
     pair<int, int> go(int left, int right, int m, bool goRight){
         return goRight ? make_pair(m + 1, right) : make_pair(left, m-1);
     }
@@ -28,12 +31,12 @@ public:
             
             if(leftAsc && rightAsc) q.push(go(left, right, m, bigger));
             else if(leftAsc && !rightAsc) {
-                q.push(go(left, right, m, true));
-                if(!bigger) q.push(go(left, right, m ,false));
+                q.push(go(left, right, m, RIGHT));
+                if(!bigger) q.push(go(left, right, m ,LEFT));
             }
             else if(!leftAsc && rightAsc) {
-                q.push(go(left, right, m, false));
-                if(bigger) q.push(go(left, right, m, true));
+                q.push(go(left, right, m, LEFT));
+                if(bigger) q.push(go(left, right, m, RIGHT));
             }
             else q.push(go(left, right, m, !bigger));
         }
