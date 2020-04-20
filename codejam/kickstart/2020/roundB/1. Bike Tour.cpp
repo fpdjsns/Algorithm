@@ -10,16 +10,9 @@ using namespace std;
 
 int solve(vector<int>& arr) {
     int ans = 0;
-    bool asc = false;
-    for(int i=1;i<arr.size();i++){
-        if(arr[i] == arr[i-1]) {
-            asc = false;
-        } else if(arr[i] < arr[i-1]){
-            if(asc) ans++;
-            asc = false;
-        } else {
-            asc = true;
-        }
+    for(int i=1; i<arr.size()-1;i++){
+        if(arr[i] > arr[i-1] && arr[i] > arr[i+1]) 
+            ans++;
     }
     return ans;
 }
