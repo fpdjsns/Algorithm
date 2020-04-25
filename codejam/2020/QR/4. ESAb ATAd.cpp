@@ -16,7 +16,6 @@ bool question(int ind) {
 	cin >> ans;
 	return ans;
 }
-void questionAny() { question(0); }
 
 char respond(vector<bool>& bitArray) {
 	for (int i = 0; i < bitArray.size(); i++) {
@@ -31,19 +30,20 @@ char respond(vector<bool>& bitArray) {
 // quesion twice
 void QuantumFluctuation(vector<bool>& bitArray, int sameIndex, int differentIndex) {
 	int b = bitArray.size();
+	
+	bool response = question(max(0, sameIndex));
 	if (sameIndex != NOT_YET) {
 		// check complemented
-		if (bitArray[sameIndex] != question(sameIndex)) {
+		if (bitArray[sameIndex] != response) {
 			// complemented
 			for (int i = 0; i < b; i++) bitArray[i] = !bitArray[i];
 		}
 	}
-	else 
-		questionAny();
 
+	response = question(max(0, differentIndex));
 	if (differentIndex != NOT_YET) {
 		// check reversed
-		if (bitArray[differentIndex] != question(differentIndex)) {
+		if (bitArray[differentIndex] != response) {
 			// reversed
 			for (int i = 0; i < b / 2; i++) {
 				int tmp = bitArray[i];
@@ -52,8 +52,6 @@ void QuantumFluctuation(vector<bool>& bitArray, int sameIndex, int differentInde
 			}
 		}
 	}
-	else
-		questionAny();
 }
 
 int main() {
