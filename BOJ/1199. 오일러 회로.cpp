@@ -12,7 +12,6 @@
 
 using namespace std;
 
-
 int n;
 vector<vector<int>> arr;
 vector<int> ans;
@@ -44,7 +43,7 @@ void dfs(int u) {
 	ans.push_back(u + 1);
 }
 
-vector<int> EulerianTrail() {
+vector<int> EulerianCircuit() {
 	int start = getStart();
 	if (start == -1) {
 		ans.push_back(-1);
@@ -64,7 +63,7 @@ int main() {
 		}
 	}
 	
-	EulerianTrail();
+	EulerianCircuit();
 	for (int i = 0; i < ans.size(); i++) {
 		printf("%d ", ans[i]);
 	}
