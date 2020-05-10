@@ -1,7 +1,7 @@
 /**
  * programmers - 2020카카오공채 - 자물쇠와 열쇠
  * problem : https://programmers.co.kr/learn/courses/30/lessons/60059
- * algorithm : simulator
+ * algorithm : simulation
  * time complexity : O((N+M)^2 * M^2)
  */
 
