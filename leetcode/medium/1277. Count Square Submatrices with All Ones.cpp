@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/count-square-submatrices-with-all-ones/
- * algorithm : DP
+ * algorithm : DP. subsum
  * time complexity : O(NMK) // N = |matrix|, M = |matrix[0]|, K = min(N, M)
  */
  
