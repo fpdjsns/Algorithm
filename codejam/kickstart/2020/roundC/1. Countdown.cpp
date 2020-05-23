@@ -18,22 +18,26 @@ int main() {
     for(int tc=1;tc<=C;tc++){
         int N, K; 
         cin >> N >> K;
-        vector<int> arr(N);
+        
+        int prev = -1;
+        int now;
         int ans = 0;
         bool canAns = false;
         for(int i=0; i<N; i++){
-            cin >> arr[i];
+            cin >> now;
             
-            if(arr[i] == K) {
+            if(now == K) {
                 canAns = true;
-            } else if(i>0){
-                canAns &= (arr[i-1]-1 == arr[i]);
+            } else {
+                canAns &= (prev-1 == now);
             }
             
-            if(arr[i] == 1 && canAns) {
+            if(now == 1 && canAns) {
                 canAns = false;
                 ans++;
             }
+            
+            prev = now;
         }
         
         printf("Case #%d: %d\n", tc, ans);
