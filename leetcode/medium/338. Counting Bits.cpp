@@ -1,3 +1,9 @@
+/**
+ * problem : https://leetcode.com/problems/counting-bits/
+ * algorithm : DP
+ * time complexity : O(N)
+ */
+
 class Solution {
 public:
     vector<int> countBits(int num) {
