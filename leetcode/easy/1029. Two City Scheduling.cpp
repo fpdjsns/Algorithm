@@ -1,7 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/two-city-scheduling/
  * algorithm : greedy
- * time complexity : O(N)
+ * time complexity : O(NlogN)
  */
  
 class Solution {
