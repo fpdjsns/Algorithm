@@ -1,5 +1,5 @@
 /**
- * problem : 
+ * problem : https://leetcode.com/problems/longest-duplicate-substring/
  * algorithm : binary search, Rabin-Karp
  * time complexity : O(NlogN)
  */
