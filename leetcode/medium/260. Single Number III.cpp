@@ -16,7 +16,7 @@ public:
         int lastSettedBit = (sum & (sum - 1)) ^ sum;
         int ans = 0;
         for(int i=0;i<N;i++){
-            if((int)(lastSettedBit & nums[i]) != 0) // nums[i] has lastSettedBit
+            if((int)(lastSettedBit & nums[i]) == lastSettedBit) // nums[i] has lastSettedBit
                 ans ^= nums[i];
         }
         
