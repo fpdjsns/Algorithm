@@ -20,7 +20,7 @@ public:
         for(map<char, int>::iterator it = countMap.begin(); it != countMap.end(); it++){
             idleSum -= min(maxCounts - 1, it->second);
         }
-        idleSum += maxCounts - 1; // add maxCounts (it will be exclude)
+        idleSum += maxCounts - 1; // add maxCounts (maxCounts task alphabet will be exclude)
         
         return tasks.size() + max(0, idleSum);
     }
