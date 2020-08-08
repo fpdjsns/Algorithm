@@ -6,17 +6,16 @@
 class Solution {
 public:
     vector<int> findDuplicates(vector<int>& nums) {
-        int ind = 0;
-        while(ind < nums.size()) {
-            int num = nums[ind];
-            if(num == ind + 1) {
-                ind++;
-                continue;
+        for(int i = 0; i < nums.size(); i++){
+            int ind = i;
+            while(nums[ind] != ind+1) {
+                swap(nums[ind], nums[nums[ind]-1]);
+                ind = nums[ind];
             }
-            
-            swap(nums[num-1], nums[ind]);
-            if(nums[num-1] == nums[ind])
-                ind++;
+            for(int i=0;i<nums.size();i++){
+                cout<<nums[i]<<", ";
+            }
+            cout<<endl;
         }
         
         vector<int> ans;
