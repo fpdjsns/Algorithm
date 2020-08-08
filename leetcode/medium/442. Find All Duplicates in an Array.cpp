@@ -9,13 +9,9 @@ public:
         for(int i = 0; i < nums.size(); i++){
             int ind = i;
             while(nums[ind] != ind+1) {
+                if(nums[ind] == nums[nums[ind]-1]) break;
                 swap(nums[ind], nums[nums[ind]-1]);
-                ind = nums[ind];
             }
-            for(int i=0;i<nums.size();i++){
-                cout<<nums[i]<<", ";
-            }
-            cout<<endl;
         }
         
         vector<int> ans;
