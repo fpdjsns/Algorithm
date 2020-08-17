@@ -1,7 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/find-median-from-data-stream/
  * data structure : heap
- * time complexity : O(NlogN)
+ * time complexity : addNum - O(logN) / findMedian - O(1)
  */ 
 
 class MedianFinder {
