@@ -12,35 +12,38 @@ using namespace std;
 vector<int> solve(int N, int A, int B, int C) {
 	if (A + B - C > N) return vector<int>(); // IMPOSSIBLE
 	if (A - C == 0 && B - C == 0 && A + B - C != N) {
-		if (C <= 1) return vector<int>();
+		if (C == 1) return vector<int>();
 	}
+	if (A < C || B < C) return vector<int>();
 	vector<int> ans(N, N);
 	int hide = N - (A + B - C);
 
 	int hideLeft = (A - C == 0) ? 0 : hide;
-	int hideRight = (B - C == 0) ? 0 : hide - hideLeft;
-	int hideMiddle = hide - hideLeft - hideRight;
+	int hideMiddle = (C > 1) ? hide - hideLeft : 0;
+	int hideRight = (B - C == 0) ? 0 : hide - hideMiddle - hideLeft;
 
+	int index = 0;
+
+	int tmp = N <= 2 ? 1 : 2;
 	// set Andre
-	for (int i = 0; i < A - C + hideLeft; i++) {
-		ans[i] = i + 1 + hideLeft;
-		if (i >= A - C)
-			ans[i] = 1;
-	}
+	for (int i = 0; i < A - C; i++)
+		ans[index++] = tmp;
+	for (int i = 0; i < hideLeft; i++)
+		ans[index++] = 1;
 
 	// set hiding among the tallest buildings
-	for (int i = 0; i < hideMiddle; i++) {
-		ans[i + A - C + hideLeft + 1] = 1;
-	}
+	ans[index++] = N;
+	for (int i = 0; i < hideMiddle; i++)
+		ans[index++] = 1;
+	for (int i = 0; i < C - 1; i++)
+		ans[index++] = N;
 
 	// set Sule
-	int tmp = 1;
-	for (int i = N - 1; i >= N - (B - C + hideRight); i--) {
-		ans[i] = tmp + hideRight;
-		if (i < A + hide)
-			ans[i] = 1;
-		tmp++;
-	}
+	for (int i = 0; i < hideRight; i++)
+		ans[index++] = 1;
+	for (int i = 0; i < B - C; i++)
+		ans[index++] = tmp;
+
 	return ans;
 }
 
