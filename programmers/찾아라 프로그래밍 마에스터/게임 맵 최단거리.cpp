@@ -1,7 +1,7 @@
 /**
  * problem : https://programmers.co.kr/learn/courses/30/lessons/1844
  * algorithm : BFS
- * time complexity : O(N^2)
+ * time complexity : O(NM)
  */
  
 #include <vector>
