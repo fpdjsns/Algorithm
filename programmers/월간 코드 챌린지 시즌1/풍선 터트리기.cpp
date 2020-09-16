@@ -1,3 +1,8 @@
+/**
+ * problem : https://programmers.co.kr/learn/courses/30/lessons/68646
+ * time complexity : O(N)
+ */
+
 #include <string>
 #include <vector>
 #include <algorithm>
