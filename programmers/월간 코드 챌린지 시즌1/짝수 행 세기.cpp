@@ -1,7 +1,7 @@
 /**
  * problem : https://programmers.co.kr/learn/courses/30/lessons/68647
  * algorithm : DP
- * time complexity : O(N * M^2) // N = number of rows, M = number of columns
+ * time complexity : O(N^2 * M) // N = number of rows, M = number of columns
  */
 
 #include <iostream>
