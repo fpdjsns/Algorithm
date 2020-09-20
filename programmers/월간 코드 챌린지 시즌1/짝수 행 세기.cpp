@@ -15,24 +15,24 @@ vector<vector<long long>> combi;
 
 // nCr
 long long getCombination(int n, int r) {
-	if (n < r) return 0;
+    if (n < r) return 0;
     long long& ret = combi[n][r];
-	if (ret != -1) return ret;
+    if (ret != -1) return ret;
 	
-	if (n == r || r == 0) return ret = 1;
-	return ret = (getCombination(n - 1, r - 1) + getCombination(n - 1, r)) % MOD;
+    if (n == r || r == 0) return ret = 1;
+    return ret = (getCombination(n - 1, r - 1) + getCombination(n - 1, r)) % MOD;
 }
 
 int solution(vector<vector<int>> arr) {
-	int n = (int)arr.size();
-	int m = (int)arr[0].size();
+    int n = (int)arr.size();
+    int m = (int)arr[0].size();
     combi = vector<vector<long long>>(301, vector<long long>(301, -1));
     
     // oneCnts[j] = j번째 열의 1의 개수
     vector<int> oneCnts(m+1, 0);
     for (int i = 0; i < n; i++)
         for (int j=0; j < m; j++)
-		    oneCnts[j+1] += arr[i][j];
+	    oneCnts[j+1] += arr[i][j];
     
     // dp[column][num] = arr[0~n][0~column]까지 num개의 행이 짝수인 경우의 수
     vector<vector<long long>> dp(m + 1, vector<long long>(n + 1, 0));
@@ -56,6 +56,5 @@ int solution(vector<vector<int>> arr) {
             }
         }
     }
-    
-	return dp[m][n];
+    return dp[m][n];
 }
