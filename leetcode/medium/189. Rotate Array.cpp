@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/rotate-array/
- * time complexity : O(2N)
+ * time complexity : O(N)
  */
 
 class Solution {
