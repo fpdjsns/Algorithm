@@ -1,7 +1,7 @@
 /**
  * problem : https://www.acmicpc.net/problem/15686
  * algorithm : backtracking
- * time complexity : O(|dist|^|chickens|)
+ * time complexity : O(|houses|^|chickens|)
  */
 
 #include <iostream>
