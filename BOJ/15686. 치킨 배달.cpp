@@ -16,22 +16,22 @@ vector<pair<int, int>> houses, chickens;
 int answer;
 int N, M;
 
-void backtracking(vector<int> dist, int ind, int cnt, int sum) {
+void backtracking(vector<int> dist, int ind, int cnt) {
 	if (ind >= chickens.size()) return;
 	if (cnt >= M) return;
 
-	backtracking(dist, ind + 1, cnt, sum);
+	backtracking(dist, ind + 1, cnt);
 
 	pair<int, int> chi = chickens[ind];
-	int tmp = 0;
+	int sum = 0;
 	for (int i = 0; i < dist.size(); i++) {
 		int x = abs(houses[i].first - chi.first);
 		int y = abs(houses[i].second - chi.second);
 		dist[i] = min(x + y, dist[i]);
-		tmp += dist[i];
+		sum += dist[i];
 	}
-	answer = min(answer, tmp);
-	backtracking(dist, ind + 1, cnt + 1, tmp);
+	answer = min(answer, sum);
+	backtracking(dist, ind + 1, cnt + 1);
 }
 
 int main() {
@@ -51,7 +51,7 @@ int main() {
 	}
 	vector<int> dist(houses.size(), 1e9);
 	vector<pair<int, int>> selects;
-	backtracking(dist, 0, 0, 0);
+	backtracking(dist, 0, 0);
 	cout << answer << endl;
 	return 0;
 }
