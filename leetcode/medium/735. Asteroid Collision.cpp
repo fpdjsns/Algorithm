@@ -25,21 +25,15 @@ public:
             int beforeSpeed = st.top();
             int beforeSize = abs(st.top());
             
-            if(isNeverCollide(beforeSpeed, speed)) { 
-                st.push(speed);
+            while(!st.empty()){
+                beforeSpeed = st.top();
+                beforeSize = abs(st.top());
+                if(isNeverCollide(beforeSpeed, speed)) break;
+                if(beforeSize <= size) st.pop(); // destroy st top
+                if(beforeSize >= size) break; // destroy astroids[i]
             }
-            else{
-                while(!st.empty()){
-                    beforeSpeed = st.top();
-                    beforeSize = abs(st.top());
-                    if(isNeverCollide(beforeSpeed, speed)) break;
-                    if(beforeSize <= size) st.pop(); // destroy st top
-                    if(beforeSize >= size) break; // destroy astroids[i]
-                }
-                if(isNeverCollide(beforeSpeed, speed) || beforeSize < size) 
-                    st.push(speed);
-            }
-            
+            if(isNeverCollide(beforeSpeed, speed) || beforeSize < size) 
+                st.push(speed);        
         }
         
         // stack to vector
