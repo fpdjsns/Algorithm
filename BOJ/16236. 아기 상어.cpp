@@ -1,6 +1,6 @@
 /**
  * problem : https://www.acmicpc.net/problem/16236
- * time complexity : O(N*N * log(N*N))
+ * time complexity : O(2*N^2 * log(N^2))
  * algorithm : BFS
  */
 
