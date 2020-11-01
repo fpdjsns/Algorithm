@@ -41,7 +41,9 @@ int main(int argc, char** argv)
 		}
 	}
 	queue<pair<pair<point, point>, int>> q; //R,B,cnt
-	
+	bool check[MAX][MAX][MAX][MAX] = { false };//(Rx, Ry, Bx, By) 탐색했는지 여부 저장
+	check[R.x][R.y][B.x][B.y] = true;
+
 	int dx[] = { -1,1,0,0 };
 	int dy[] = { 0,0,-1,1 };
 	q.push({ {R,B}, 0 });
@@ -95,7 +97,11 @@ int main(int argc, char** argv)
 					else nR.y -= dy[i];
 				}
 			}
+
+			//방문 안한 것만 큐에 push
+			if (check[nR.x][nR.y][nB.x][nB.y]) continue;
 			q.push({ { nR,nB }, cnt });
+			check[nR.x][nR.y][nB.x][nB.y] = true;
 		}
 	}
 	cout << "-1";
