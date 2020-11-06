@@ -3,7 +3,6 @@
  * algorithm : BFS
  * time complexity : O(N)
  */
-
 class Solution {
     
     vector<int> beforeNode;
@@ -43,8 +42,6 @@ class Solution {
     
 public:
     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
-        if(n==1) return vector<int>{ 0 };
-        if(n==2) return vector<int>{ 0, 1 };
         
         vector<vector<int>> newEdges(n);
         for(int i=0;i<edges.size();i++){
@@ -57,12 +54,14 @@ public:
         for(auto start : lasts) {
             vector<int> lastNodes = maxDistNodes(n, start, newEdges);
             for(auto last: lastNodes){
-                int now = beforeNode[last];
+                int now = last;
                 vector<int> tmpNodes;
                 while(now != start) { 
                     tmpNodes.push_back(now);
                     now = beforeNode[now];
                 }
+                tmpNodes.push_back(start);
+                    
                 int middle = tmpNodes.size()/2;
                 if(tmpNodes.size() < 1) continue;
                 answerSet.insert(tmpNodes[middle]);
