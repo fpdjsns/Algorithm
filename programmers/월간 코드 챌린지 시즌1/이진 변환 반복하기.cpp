@@ -4,6 +4,7 @@
  */
  
 #include <string>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
@@ -15,7 +16,6 @@ string changeBinary(int num) {
         binary.push_back((num % 2) + '0');
         num /= 2;
     }
-    reverse(binary.begin(), binary.end());
     return binary;
 }
 
