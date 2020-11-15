@@ -1,7 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
  * time complexity : O(N)
- * algorithm : DFS (preorder)
+ * algorithm : DFS
  */
 
 /*
