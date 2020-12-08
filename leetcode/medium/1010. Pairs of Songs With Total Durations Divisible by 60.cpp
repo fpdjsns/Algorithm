@@ -4,13 +4,14 @@
  */
  
 class Solution {
+    int SIXTEEN = 60;
 public:
     int numPairsDivisibleBy60(vector<int>& times) {
-        map<int, int> cnt;
+        vector<int> cnts(SIXTEEN);
         int answer = 0;
         for(auto time: times) {
-            answer += cnt[(60 - time%60)%60];
-            cnt[time % 60]++;
+            answer += cnts[(SIXTEEN - time%SIXTEEN)%SIXTEEN];
+            cnts[time % SIXTEEN]++;
         }
         return answer;
     }
