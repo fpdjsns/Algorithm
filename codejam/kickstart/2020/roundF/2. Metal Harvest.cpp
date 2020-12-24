@@ -30,7 +30,7 @@ int main () {
             
             if(harvests[i].second <= start) continue;
             // repeat
-            int cnt = (harvests[i].second - start + K - 1);
+            int cnt = (harvests[i].second - start + K - 1) / K;
             answer += cnt;
             canStart = start + (K * cnt);
         }
