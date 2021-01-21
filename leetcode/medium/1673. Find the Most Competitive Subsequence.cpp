@@ -2,7 +2,7 @@
  * problem : https://leetcode.com/problems/find-the-most-competitive-subsequence/
  * time complexity : O(2N)
  * data structure : stack(deque)
- * /
+ */
 
 class Solution {
 public:
