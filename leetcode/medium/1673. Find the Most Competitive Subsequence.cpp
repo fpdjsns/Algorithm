@@ -19,7 +19,7 @@ public:
         }
         
         vector<int> answer(k); 
-        copy(st.cbegin(), st.cend(), answer.begin() ); 
+        copy(st.begin(), st.end(), answer.begin() ); 
         
         return answer;
     }
