@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/merge-k-sorted-lists/
- * time complexity : O(NM). N = k, M = lists[i].length.
+ * time complexity : O(NM). N = k, M = lists[i].length * 
  */
 
 /**
