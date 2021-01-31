@@ -26,6 +26,7 @@ string solution(string new_id) {
         if(!((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')
           || c == '-' || c == '_' || c == COMMA)) continue;
         
+        // #3
         if(answer.size() != 0 &&
            c == COMMA && answer.back() == COMMA) continue;
         
