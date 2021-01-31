@@ -13,8 +13,6 @@ char COMMA = '.';
 string solution(string new_id) {
     string answer = "";
     for(char c: new_id) {
-        // #4
-        if(answer.size() == 0 && c == COMMA) continue;
         
         // #6
         if(answer.size() == 15) break;
@@ -26,9 +24,10 @@ string solution(string new_id) {
         if(!((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')
           || c == '-' || c == '_' || c == COMMA)) continue;
         
-        // #3
-        if(answer.size() != 0 &&
-           c == COMMA && answer.back() == COMMA) continue;
+        // #4
+        if(c == COMMA 
+           && (answer.size() == 0 || answer.back() == COMMA)) 
+            continue;
         
         answer.push_back(c);
     }
