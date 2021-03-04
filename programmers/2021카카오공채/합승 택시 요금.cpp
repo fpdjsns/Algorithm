@@ -38,10 +38,7 @@ int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
     s--; a--; b--;
     int answer = pays[s][a] + pays[s][b]; // no 합승
     for(int m=0; m<n;m++){// m = 중간지점
-        int tmp = pays[s][m];
-        if(m != a) tmp += pays[m][a];
-        if(m != b) tmp += pays[m][b];
-        answer = min(answer, tmp);
+        answer = min(answer, pays[s][m] + pays[m][a] + pays[m][b]);
     }
     
     return answer;
