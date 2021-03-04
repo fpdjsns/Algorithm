@@ -3,7 +3,6 @@
  * time complexity : O(N^3)
  * algorithm : Floyd
  */
-
 #include <string>
 #include <iostream>
 #include <vector>
@@ -27,6 +26,7 @@ int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
         pays[u][v] = money;
         pays[v][u] = money;
     }
+    for(int i=0;i<n;i++) pays[i][i] = 0;
     for(int k=0;k<n;k++){
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
@@ -38,7 +38,6 @@ int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
     s--; a--; b--;
     int answer = pays[s][a] + pays[s][b]; // no 합승
     for(int m=0; m<n;m++){// m = 중간지점
-        if(m == s) continue;
         int tmp = pays[s][m];
         if(m != a) tmp += pays[m][a];
         if(m != b) tmp += pays[m][b];
