@@ -15,13 +15,13 @@ public:
         vector<vector<int>> dp(target+1, vector<int>(4));
         dp[0][0] = 1; // 0개의 수를 더하면 0
         
-        for(int i=0; i<n; i++){
-            int num = arr[i];
-            for(int k=target; k>=0; k--){
+        for(auto num: arr){
+            for(int t=target; t>=0; t--){
                 for(int cnt=2; cnt>=0; cnt--){
-                    // num + arr[j] = k
-                    if(k - num < 0) continue;
-                    dp[k][cnt+1] = (dp[k][cnt+1] + dp[k-num][cnt]) % MOD;
+                    // num + x = t
+                    // x = t - num
+                    if(t - num < 0) continue;
+                    dp[t][cnt+1] = (dp[t][cnt+1] + dp[t-num][cnt]) % MOD;
                 }
             }
         }
