@@ -1,6 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/advantage-shuffle/
  * time complexity : O(NlogN)
+ * algorithm : two-pointer
  */
 
 class Solution {
