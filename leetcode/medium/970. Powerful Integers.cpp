@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/powerful-integers/
- * time complexity : O(logN * logM) // N=x, M=y
+ * time complexity : O((logN bound) * (logM bound)) // N=x, M=y
  */
  
 class Solution {
