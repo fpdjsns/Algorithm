@@ -36,7 +36,7 @@ vector<int> solution(int rows, int columns, vector<vector<int>> queries) {
 		for (int j = y1; j <= y2; j++) { set(array[x1][j], before, minNum); }
 		for (int i = x1 + 1; i <= x2; i++) { set(array[i][y2], before, minNum); }
 		for (int j = y2 - 1; j >= y1; j--) { set(array[x2][j], before, minNum); }
-		for (int i = x2 - 1; i >= x1; i--) { set(array[i][y1], before, minNum); }
+		for (int i = x2 - 1; i > x1; i--) { set(array[i][y1], before, minNum); }
 		answer.push_back(minNum);
 	}
 
