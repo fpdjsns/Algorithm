@@ -1,3 +1,8 @@
+/** 
+ * problem : https://programmers.co.kr/learn/courses/30/lessons/42895
+ * algorithm : DP
+ */
+
 #include <string>
 #include <vector>
 #include <set>
