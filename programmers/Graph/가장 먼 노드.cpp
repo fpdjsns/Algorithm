@@ -1,7 +1,7 @@
 /**
  * problem : https://programmers.co.kr/learn/courses/30/lessons/49189
  * time complexity : O(E)
- * data structure : graph
+ * algorithm : BFS
  */
 
 #include <string>
