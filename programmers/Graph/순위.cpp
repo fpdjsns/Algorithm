@@ -13,19 +13,19 @@ using namespace std;
 
 int solution(int n, vector<vector<int>> results) {
     
-    vector<vector<bool>> cnts(n, vector<bool>(n, false));
+    vector<vector<bool>> matches(n, vector<bool>(n, false));
     
     for(auto result : results) {
         int winner = result[0] - 1;
         int loser = result[1] - 1;
-        cnts[winner][loser] = true;
+        matches[winner][loser] = true;
     }
     
     for(int k=0; k<n; k++){
         for(int u = 0; u < n; u++){
             for(int v = 0; v < n; v++){
                 if(u == v) continue;
-                if(cnts[u][k] && cnts[k][v]) cnts[u][v] = true;
+                if(matches[u][k] && matches[k][v]) matches[u][v] = true;
             }
         }
     }
@@ -34,7 +34,7 @@ int solution(int n, vector<vector<int>> results) {
     for(int u = 0; u < n; u++){
         int sum = 0;
         for(int v = 0; v < n; v++){
-            sum += cnts[u][v] + cnts[v][u];
+            sum += matches[u][v] + matches[v][u];
         }
         answer += (sum == n-1);
     }
