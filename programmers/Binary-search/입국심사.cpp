@@ -24,7 +24,7 @@ long long solution(int n, vector<int> times) {
         
         // possible
         if(peopleCnt >= n) {
-            answer = min(answer, m);
+            answer = m;
             right = m - 1;
         } else { // impossible
             left = m + 1;
