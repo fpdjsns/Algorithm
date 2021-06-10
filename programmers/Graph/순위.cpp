@@ -4,6 +4,7 @@
  * time complexity : O(N^3)
  */
 
+
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -25,7 +26,7 @@ int solution(int n, vector<vector<int>> results) {
         for(int u = 0; u < n; u++){
             for(int v = 0; v < n; v++){
                 if(u == v) continue;
-                if(matches[u][k] && matches[k][v]) matches[u][v] = true;
+                matches[u][v] = matches[u][v] || (matches[u][k] && matches[k][v]);
             }
         }
     }
@@ -40,3 +41,4 @@ int solution(int n, vector<vector<int>> results) {
     }
     return answer;
 }
+
