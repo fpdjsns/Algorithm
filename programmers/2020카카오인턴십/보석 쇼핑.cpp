@@ -6,7 +6,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <set>
 
 using namespace std;
@@ -16,7 +16,7 @@ vector<int> solution(vector<string> gems) {
     for(auto gem: gems) gemKinds.insert(gem);
     
     int n = gems.size();
-    map<string, int> cnts;
+    unordered_map<string, int> cnts;
     int left = 0;
     vector<int> answer = {1, n};
     set<string> exists;
