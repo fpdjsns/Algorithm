@@ -27,8 +27,7 @@ vector<int> solution(vector<string> gems) {
         while(left < right && cnts[gems[left]] > 1) {
             cnts[gems[left++]]--;
         }
-        if(exists.size() == gemKinds.size() && 
-           right - left < answer[1] - answer[0]) 
+        if(exists.size() == gemKinds.size() && right - left < answer[1] - answer[0]) 
             answer = {left+1, right+1};
     }
     return answer;
