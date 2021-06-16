@@ -1,7 +1,7 @@
 /** 
  * problem : https://programmers.co.kr/learn/courses/30/lessons/42884
  * time complexity : O(NlogN)
- * algorithm : two-pointer
+ * algorithm : greedy
  */
  
 #include <string>
