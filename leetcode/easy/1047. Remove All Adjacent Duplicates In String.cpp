@@ -8,9 +8,10 @@ public:
     string removeDuplicates(string s) {
         string answer;
         for(auto c: s) {
-            answer.push_back(c);
-            while(answer.size() >= 2 && answer[answer.size()-1] == answer[answer.size()-2]) {
-                answer.pop_back(); answer.pop_back();
+            if(!answer.empty() && answer.back() == c) {
+                answer.pop_back();
+            } else {
+                answer.push_back(c);
             }
         }
         return answer;
