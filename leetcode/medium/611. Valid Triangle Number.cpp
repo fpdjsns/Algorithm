@@ -16,7 +16,6 @@ public:
             int right = i+2;
             for(int left=i+1; left<n-1; left++){
                 if(nums[left] == 0) continue;
-                right = max(right, left+1);
                 while(right < n && nums[right] < nums[i] + nums[left]) right++;
                 answer += right - left - 1;
             }
