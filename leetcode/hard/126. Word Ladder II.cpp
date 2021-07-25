@@ -33,11 +33,12 @@ public:
         
         int answerLen = -1;
         vector<vector<string>> answer = vector<vector<string>>();
+        set<string> visited;
         
         while(!q.empty()) {
             queue<vector<string>> nextQ;
             
-            vector<pair<string, string>> todoDeleted;
+            set<string> todoVisited;
             while(!q.empty()){
                 vector<string> wordList = q.front();
                 string lastWord = wordList.back();
@@ -48,19 +49,17 @@ public:
                     continue;
                 }
                 
+                if(visited.find(lastWord) != visited.end()) continue; // already visited
                 for(auto nextWord: dict[lastWord]) {
                     wordList.push_back(nextWord);
                     nextQ.push(wordList);
                     wordList.pop_back();
-                    
-                    todoDeleted.push_back({lastWord,nextWord});
+                    todoVisited.insert(lastWord);
                 }
             }
             
-            // delete edge
-            for(auto deletedEdge: todoDeleted) {
-                dict[deletedEdge.first].erase(deletedEdge.second);
-                dict[deletedEdge.second].erase(deletedEdge.first);
+            for(auto vertex: todoVisited) {
+                visited.insert(vertex);
             }
 
             // find answer
