@@ -10,7 +10,7 @@ public:
     public:
         int x;
         int y;
-        float angl; // 각도 * 시작점과의 거리
+        float angl; // 각도
         int dist = 0;
         
         void setDist(Tree other) {
