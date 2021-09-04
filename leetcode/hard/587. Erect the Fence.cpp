@@ -1,7 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/erect-the-fence/
  * time complexity : O(NlogN)
- * algorithm..? : Convex Hall
+ * algorithm..? : 볼록 껍질(Convex Hull)
  */
 class Solution {
     
