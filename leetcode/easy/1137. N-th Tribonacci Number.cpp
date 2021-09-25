@@ -13,6 +13,6 @@ public:
         for(; i<=n; i++){ 
             arr[i%3] = arr[0] + arr[1] + arr[2];
         }
-        return arr[(i-1)%3];
+        return arr[n%3];
     }
 };
