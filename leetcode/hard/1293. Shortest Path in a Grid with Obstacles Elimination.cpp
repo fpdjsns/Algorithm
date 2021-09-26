@@ -1,6 +1,6 @@
 /** 
  * problem : https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/
- * time complexity : O(NMK)
+ * time/space complexity : O(NMK)
  * algorithm : BFS
  */
 
