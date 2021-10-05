@@ -14,12 +14,10 @@ public:
         
         vector<int> answer(n, sum / n);
         int avg = sum / n;
-        if(avg > 6 || avg < 1) return {};
-        
-        sum -= avg * n;
-        for(int i=0; i<sum; i++){
+        int namuge = sum % n;
+        if(avg + (namuge > 0) > 6 || avg < 1) return {};
+        for(int i=0; i<namuge; i++){
             answer[i]++;
-            if(answer[i] > 6) return {};
         }
         return answer;
     }
