@@ -1,6 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/bitwise-and-of-numbers-range/
  * time complexity : O(logN). N = min(m, n).
+ */
 
 class Solution {
 public:
