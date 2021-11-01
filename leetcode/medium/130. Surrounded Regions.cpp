@@ -5,48 +5,59 @@
  */
 
 class Solution {
-    void dfs(vector<vector<char>>& board, vector<vector<bool>>& check, int x, int y, bool isSet){
+    int n, m;
+    
+    int dx[4] = {-1, 1, 0, 0};
+    int dy[4] = {0, 0, -1, 1};
+    
+    void dfs(vector<vector<char>>& board, vector<vector<bool>>& check, int x, int y, bool setToX) {
         if(board[x][y] == 'X') return;
-        int dx[] = { -1, 1, 0, 0 };
-        int dy[] = { 0, 0, -1, 1 };
-        queue<pair<int, int>> q;
-        q.push({x, y});
-        while(!q.empty()){
-            x = q.front().first;
-            y = q.front().second;
+        if(check[x][y]) return; 
+        
+        queue<pair<int,int>> q;
+        q.push({x,y});
+        check[x][y] = true;
+        while(!q.empty()) {
+            int x=q.front().first;
+            int y=q.front().second;
             q.pop();
-            if(check[x][y]) continue;
-            check[x][y] = true;
-            if(isSet) 
-                board[x][y] = 'X';
+            
+            if(setToX) board[x][y] = 'X';
+            
             for(int i=0;i<4;i++){
                 int nx = x + dx[i];
                 int ny = y + dy[i];
-                if(nx < 0 || nx >= board.size()) continue;
-                if(ny < 0 || ny >= board[nx].size()) continue;
+                
+                if(nx < 0 || nx >= m || ny < 0 || ny >= n) continue;
                 if(check[nx][ny]) continue;
                 if(board[nx][ny] == 'X') continue;
+                
+                check[nx][ny] = true;
                 q.push({nx,ny});
             }
         }
     }
+    
 public:
     void solve(vector<vector<char>>& board) {
-        int n = board.size(); 
-        if(n==0) return;
-        int m = board[0].size();
-        vector<vector<bool>> check(n, vector<bool>(m, false));
-        for(int i=0;i<n;i++){
-            dfs(board, check, i, 0, false);
-            dfs(board, check, i, m-1, false);
+        m = board.size();
+        n = board[0].size();
+        
+        vector<vector<bool>> check(m, vector<bool>(n, false));
+        
+        // 테두리에서부터 시작하는 'O'는 탐색 처리를 다 한다.
+        for(int i=0; i<m; i++){
+            dfs(board,check,i,0,false);
+            dfs(board,check,i,n-1,false);
         }
-        for(int i=0;i<m;i++){
-            dfs(board, check, 0, i, false);
-            dfs(board, check, n-1, i, false);
+        for(int j=0; j<n; j++){
+            dfs(board,check,0,j,false);
+            dfs(board,check,m-1,j,false);
         }
         
-        for(int i=1;i<n-1;i++){
-            for(int j=1;j<m-1;j++){
+        // 탐색하면서 O -> X
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
                 dfs(board,check,i,j,true);
             }
         }
