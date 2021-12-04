@@ -2,7 +2,7 @@
  * problem : https://leetcode.com/problems/stream-of-characters/
  * data structure : Trie
  *
- * N = |words.length|, M = |words[i].length|, Q = |query|
+ * N = words.length, M = words[i].length, Q = |query|
  * time complexity : O(NM + MQ)
  * space complexity : O(NM)
  */
