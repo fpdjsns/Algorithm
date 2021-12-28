@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/merge-intervals/
- * time complexity : O(N)
+ * time complexity : O(NlogN)
  * algorithm : greedy
  */
  
