@@ -3,21 +3,21 @@
  * time complexity : O(NlogM) // M = sum of nums, N = |nums|
  * algorithm : binary search
  */
- 
+
 class Solution {
     bool canAns(vector<int>& nums, int sum, int m) {
         int subSum = 0;
-        int diff = 1;
+        int division = 1;
         for(auto num: nums){
             if(num > sum) return false;
-            if(diff > m) break;
+            if(division > m) break;
             if(subSum + num > sum) {
-                diff++;
+                division++;
                 subSum = 0;
             }
             subSum += num;
         }
-        return diff <= m;
+        return division <= m;
     }
     
 public:
