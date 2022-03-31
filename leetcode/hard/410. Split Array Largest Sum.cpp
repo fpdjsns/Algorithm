@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/split-array-largest-sum/
- * time complexity : O(NlogN)
+ * time complexity : O(NlogM) // M = sum of nums, N = |nums|
  * algorithm : binary search
  */
  
