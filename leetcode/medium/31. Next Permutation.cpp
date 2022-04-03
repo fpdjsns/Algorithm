@@ -19,7 +19,6 @@ public:
         while(index >= 0 && nums[index] >= nums[min(index+1, n-1)]) {
             index--;
         }
-        cout << index << endl;
         if(index == -1) {
             reverse(nums, 0);
         } else{
