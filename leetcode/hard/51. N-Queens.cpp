@@ -1,7 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/n-queens/
  * time complexity : O(N!)
- * space complexity : O(N^2)
  * algorithm : backtracking
  */
  
