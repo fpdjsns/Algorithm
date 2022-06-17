@@ -39,6 +39,6 @@ class Solution {
 public:
     int minCameraCover(TreeNode* root) {
         if(dfs(root) == NOT_MONITORED) answer++;
-        return max(1, answer);
+        return answer;
     }
 };
