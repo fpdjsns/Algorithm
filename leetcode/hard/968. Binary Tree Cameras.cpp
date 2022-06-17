@@ -1,7 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/binary-tree-cameras/
  * time complexity : O(V+E)
- * algorithm : DFS
+ * algorithm : DFS, Greedy
  */
  
  /**
