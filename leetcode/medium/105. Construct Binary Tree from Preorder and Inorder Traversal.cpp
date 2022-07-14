@@ -1,10 +1,10 @@
 /**
  * problem : https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
- * time complexity : O(N)
+ * time complexity : O(NlogN)
  * data structure : binary tree
  */
- 
-/**
+
+ /**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -22,7 +22,7 @@ class Solution {
         
         int root = preorder[preStart];
         TreeNode* node = new TreeNode(root);
-        int inRootIndex = find(inorder.begin(), inorder.end(), root) - inorder.begin();
+        int inRootIndex = find(inorder.begin() + inStart, inorder.end(), root) - inorder.begin();
         int size = (root == inorder[inStart]) ? 1 : inRootIndex - inStart + 1;
         
         node->left = buildTree(preorder, inorder, preStart + 1, inStart, inRootIndex-1);
