@@ -15,32 +15,26 @@
  * };
  */
 class Solution {
-    ListNode* setNext(ListNode* node, int val) {
-        ListNode* newNode = new ListNode(val);
-        node->next = newNode;
-        return newNode;
+    ListNode* set(ListNode* node, ListNode* next) {
+        node->next = next;
+        return node->next;
     }
 public:
     ListNode* partition(ListNode* head, int x) {
-        ListNode* leftHeader = new ListNode();
-        ListNode* rightHeader = new ListNode();
-        ListNode* left = leftHeader;
-        ListNode* right = rightHeader;
-        
+        ListNode* leftHead = new ListNode();
+        ListNode* rightHead = new ListNode();
+        ListNode* left = leftHead;
+        ListNode* right = rightHead;
         
         ListNode* node = head;
-        while(node != nullptr) {
-            if(node->val < x){
-                left = setNext(left, node->val);
-            } else {
-                right = setNext(right, node->val);
-            }
+        while(node) {
+            if(node->val < x) left = set(left, node);
+            else right = set(right, node);
             node = node->next;
         }
+        right->next = nullptr;
+        set(left, rightHead->next);
         
-        if(leftHeader->next == nullptr) leftHeader = rightHeader;
-        else left->next = rightHeader->next;
-        
-        return leftHeader->next;
+        return leftHead->next;
     }
 };
