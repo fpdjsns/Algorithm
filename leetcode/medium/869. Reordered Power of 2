@@ -1,0 +1,22 @@
+/**
+ * problem : https://leetcode.com/problems/reordered-power-of-2/
+ * time complexity : O(NlogN) // N = n 자리수
+ */
+ 
+class Solution {
+public:
+    bool reorderedPowerOf2(int n) {
+        
+        string num = to_string(n);
+        sort(num.begin(), num.end());
+        
+        vector<int> arr;
+        for(int i=0; i<=30; i++){
+            string tmp = to_string((int)pow(2, i));
+            sort(tmp.begin(), tmp.end());
+            if(num == tmp) return true;
+        }
+
+        return false;
+    }
+};
