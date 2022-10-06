@@ -1,6 +1,7 @@
 /**
  * problem : https://leetcode.com/problems/time-based-key-value-store/description/
  * time complexity : O(NlogM) // N = count of key, M = count of timestamp (when same key)
+ * algorithm : binary search
  */
 
 class TimeMap {
