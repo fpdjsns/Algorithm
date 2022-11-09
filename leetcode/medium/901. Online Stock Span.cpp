@@ -1,5 +1,8 @@
 /**
  * problem : https://leetcode.com/problems/online-stock-span/
+ * space complexity : O(N)
+ * time complexity : O(1)
+ * 참고 : https://leetcode.com/problems/online-stock-span/solutions/2643474/online-stock-span/
  */
 
 class StockSpanner {
