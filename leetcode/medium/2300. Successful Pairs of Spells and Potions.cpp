@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/
- * time comlexity : O(NlogN)
+ * time comlexity : O(NlogN + MlogM)
  * algorithm : greedy
  */
 
