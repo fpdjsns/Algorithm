@@ -1,5 +1,5 @@
 /**
- * problem : 
+ * problem : https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/
  * time comlexity : O(NlogN)
  */
 
