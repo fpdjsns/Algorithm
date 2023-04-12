@@ -12,7 +12,6 @@ public:
 
         stack<string> paths;
         while (getline(ss, temp, '/')) {
-            cout << temp << endl;
             if(temp.size() == 0) continue;
             if(temp == ".") continue;
             if(temp == "..") {
