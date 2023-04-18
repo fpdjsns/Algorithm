@@ -1,6 +1,6 @@
 /**
  * problem : https://leetcode.com/problems/merge-strings-alternately/description/
- * time complexity : O(N)
+ * time complexity : O(N + M)
  */
 
 class Solution {
